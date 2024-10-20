@@ -2,6 +2,14 @@ interface IAdjacencyList {
   [key: string]: string[]; // the key is the node, and the value is an array of its direct descendants.
 }
 
+/**
+ * Performs a Breadth-First Search (BFS) traversal on a graph.
+ *
+ * @param startNode - The node to start the BFS from.
+ * @param graph - The graph to traverse, represented as an adjacency list.
+ * @returns An array of nodes in the order they were visited.
+ */
+
 function TsBfs(startNode: string, graph: IAdjacencyList): string[] {
   let queue: string[] = [startNode];
   let visited: string[] = [];
