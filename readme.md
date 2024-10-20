@@ -40,5 +40,42 @@ You can write your own optimised python implementation fil
 #### Graph One used in the example files
 
 ![Sample Graph](img/sample.png)
+Sample Graph's adjacency list
 
+```js
+// Here is an adjacency list data structure of the graph
+{
+  S: ["A", "B", "C"],
+  A: ["D", "E"],
+  B: ["G", "F"],
+  C: [],
+  D: [],
+  E: [],
+  G: [],
+  F: [],
+};
+
+```
+
+There is also a second Graph/Tree used in the example files though cyclic hence the drawing might be a lot more dirty that the first unidirectional graph.
+
+```js
+
+{
+  0: ["3", "5", "9"],
+  1: ["6", "7", "4"],
+  2: ["10", "5"],
+  3: ["0"],
+  4: ["1", "5", "8"],
+  5: ["2", "0", "4"],
+  6: ["1"],
+  7: ["1"],
+  8: ["4"],
+  9: ["0"],
+  10: ["2"],
+};
+
+```
+
+Thank you.
 Author: Olanrewaju A. Olaboye
