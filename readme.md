@@ -1,6 +1,8 @@
-# Algorithms
+# Breadth First Search Algorithm
 
-## Search Algorithms (Python, Js and Ts) + More languages soon
+Breadth first search is an algorithm known for searching a tree data structure for node that satisfy a given property. It is known to traverse nodes on each breadth of the path leading from the start node to the goal node. It doesn’t visit the next depth until it has visited all the child on the current depth. Hence the name 'breadth-first' as it visits all the node on each breadth before going deeper another level. Breadth first search is aided to be complete because given a desired goal node and enough time it will find a solution path from start node to goal node so far it exists.
+
+## BFS Search Algorithms (Python, Js and Ts) + More languages soon
 
 This repository contains code for BFS search algorithms and it was written to be used in a tutorial both text and video tutorial explaining the USAGE of BFS search algorithm. It contains code implementation in Javascript, Python and Typescript language.
 
