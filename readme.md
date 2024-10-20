@@ -21,18 +21,24 @@ You can write your own optimised python implementation fil
 ### Run commands
 
 1. Breadth-first search Js code ()
-   `bun run bfs/bfs.js`
+    `bun run bfs/bfs.js`
 
 2. Breadth-first search optimised Js code ()
-   `bun run bfs/optbfs.js`
+    `bun run bfs/optbfs.js`
 
 3. Breadth-first search Ts code ()
-   `bun run bfs/bfs.ts`
+    `bun run bfs/bfs.ts`
 
 4. Breadth-first search Optimised Ts code ()
-   `bun run bfs/optbfs.ts`
+    `bun run bfs/optbfs.ts`
 
 5. Breadth-first search Python code ()
-   `python bfs/bfs.py`
+    `python bfs/bfs.py`
+
+### Test Graph One used in the example files
+
+#### Graph One used in the example files
+
+![Sample Graph](img/sample.png)
 
 Author: Olanrewaju A. Olaboye
