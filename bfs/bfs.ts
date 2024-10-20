@@ -13,14 +13,15 @@ function TsBfs(startNode: string, graph: IAdjacencyList): string[] {
     // Check if currentNode is defined before using it
     if (currentNode !== undefined) {
       // identify the direct descendants of the current node
-      const flatChildren = graph[currentNode] || [];
+      const children = graph[currentNode] || [];
 
-      // add direct descendants of current Node to the queue
-      queue = [...queue, ...flatChildren];
+      visited.push(currentNode);
 
-      // add current Node to the visited array/list if it is not already visited
-      if (!visited.includes(currentNode)) {
-        visited.push(currentNode);
+      // add current Node to the queue if not already visited
+      for (const child of children) {
+        if (!visited.includes(child)) {
+          queue.push(child);
+        }
       }
     }
   }
@@ -29,12 +30,14 @@ function TsBfs(startNode: string, graph: IAdjacencyList): string[] {
 
 // Test graphs
 const TsTestGraph: IAdjacencyList = {
-  "5": ["3", "7"],
-  "3": ["2", "4"],
-  "7": ["8"],
-  "2": [],
-  "4": ["8"],
-  "8": [],
+  S: ["A", "B", "C"],
+  A: ["D", "E"],
+  B: ["G", "F"],
+  C: [],
+  D: [],
+  E: [],
+  G: [],
+  F: [],
 };
 
 const TsSecondTestGraph: IAdjacencyList = {
@@ -52,5 +55,10 @@ const TsSecondTestGraph: IAdjacencyList = {
 };
 
 // Example usage
-console.log(TsBfs("5", testGraph));
-console.log(TsBfs("0", secondTestGraph));
+// Execute BFS on testgraph starting from node 'S'
+console.log("BFS Ts result for TsTestgraph starting from 'S':");
+console.log(TsBfs("S", TsTestGraph));
+
+// Execute BFS on secondTestGraph starting from node '0'
+console.log("\nBFS result for TsSecondTestGraph starting from '0':");
+console.log(TsBfs("0", TsSecondTestGraph));
